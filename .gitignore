@@ -1,0 +1,14 @@
+# Node / React projects
+node_modules/
+dist/
+build/
+
+# Python projects
+venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
