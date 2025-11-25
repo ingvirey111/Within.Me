@@ -2,10 +2,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Home Page")
-            .font(.largeTitle)
-            .fontWeight(.semibold)
-            .padding()
+        VStack(alignment: .leading, spacing: 24) {
+            GreetingHeaderView()
+
+            Spacer()
+        }
+        .padding(.top, 32)
     }
 }
 
