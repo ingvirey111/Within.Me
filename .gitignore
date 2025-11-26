@@ -12,3 +12,9 @@ venv/
 # IDE
 .vscode/
 .idea/
+
+# Xcode / iOS
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.xcworkspace/xcuserdata/
