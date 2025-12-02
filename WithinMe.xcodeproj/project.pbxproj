@@ -13,6 +13,7 @@
 		1D1C16E72E28108200A0F5C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1C16E32E28108100A0F5C5 /* Preview Assets.xcassets */; };
 		1D1C17012E28313700A0F5C5 /* GreetingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C17002E28313700A0F5C5 /* GreetingHeaderView.swift */; };
 		1D1C17032E28320000A0F5C5 /* CheckInSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C17022E28320000A0F5C5 /* CheckInSectionView.swift */; };
+		1D1C17052E28330000A0F5C5 /* MicrolearningCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C17042E28330000A0F5C5 /* MicrolearningCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1D1C16E32E28108100A0F5C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D1C17002E28313700A0F5C5 /* GreetingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingHeaderView.swift; sourceTree = "<group>"; };
 		1D1C17022E28320000A0F5C5 /* CheckInSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSectionView.swift; sourceTree = "<group>"; };
+		1D1C17042E28330000A0F5C5 /* MicrolearningCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrolearningCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 				1D1C16DF2E28108100A0F5C5 /* ContentView.swift */,
 				1D1C17002E28313700A0F5C5 /* GreetingHeaderView.swift */,
 				1D1C17022E28320000A0F5C5 /* CheckInSectionView.swift */,
+				1D1C17042E28330000A0F5C5 /* MicrolearningCardView.swift */,
 				1D1C16E12E28108100A0F5C5 /* Assets.xcassets */,
 				1D1C16E22E28108100A0F5C5 /* Info.plist */,
 				1D1C16DC2E28108100A0F5C5 /* Preview Content */,
@@ -148,6 +151,7 @@
 				1D1C16E42E28108200A0F5C5 /* ContentView.swift in Sources */,
 				1D1C17012E28313700A0F5C5 /* GreetingHeaderView.swift in Sources */,
 				1D1C17032E28320000A0F5C5 /* CheckInSectionView.swift in Sources */,
+				1D1C17052E28330000A0F5C5 /* MicrolearningCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
