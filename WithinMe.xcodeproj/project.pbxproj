@@ -16,6 +16,8 @@
 		1D1C17052E28330000A0F5C5 /* MicrolearningCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C17042E28330000A0F5C5 /* MicrolearningCardView.swift */; };
 		1D1C17072E28340000A0F5C5 /* DailyMicrolearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C17062E28340000A0F5C5 /* DailyMicrolearningView.swift */; };
 		1D1C17092E28350000A0F5C5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C17082E28350000A0F5C5 /* HomeView.swift */; };
+		1D1C170B2E28360000A0F5C5 /* QuickAccessCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C170A2E28360000A0F5C5 /* QuickAccessCardView.swift */; };
+		1D1C170D2E28370000A0F5C5 /* QuickAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C170C2E28370000A0F5C5 /* QuickAccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		1D1C17042E28330000A0F5C5 /* MicrolearningCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrolearningCardView.swift; sourceTree = "<group>"; };
 		1D1C17062E28340000A0F5C5 /* DailyMicrolearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMicrolearningView.swift; sourceTree = "<group>"; };
 		1D1C17082E28350000A0F5C5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1D1C170A2E28360000A0F5C5 /* QuickAccessCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAccessCardView.swift; sourceTree = "<group>"; };
+		1D1C170C2E28370000A0F5C5 /* QuickAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				1D1C17022E28320000A0F5C5 /* CheckInSectionView.swift */,
 				1D1C17042E28330000A0F5C5 /* MicrolearningCardView.swift */,
 				1D1C17062E28340000A0F5C5 /* DailyMicrolearningView.swift */,
+				1D1C170A2E28360000A0F5C5 /* QuickAccessCardView.swift */,
+				1D1C170C2E28370000A0F5C5 /* QuickAccessView.swift */,
 				1D1C16E12E28108100A0F5C5 /* Assets.xcassets */,
 				1D1C16E22E28108100A0F5C5 /* Info.plist */,
 				1D1C16DC2E28108100A0F5C5 /* Preview Content */,
@@ -160,6 +166,8 @@
 				1D1C17032E28320000A0F5C5 /* CheckInSectionView.swift in Sources */,
 				1D1C17052E28330000A0F5C5 /* MicrolearningCardView.swift in Sources */,
 				1D1C17072E28340000A0F5C5 /* DailyMicrolearningView.swift in Sources */,
+				1D1C170B2E28360000A0F5C5 /* QuickAccessCardView.swift in Sources */,
+				1D1C170D2E28370000A0F5C5 /* QuickAccessView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
