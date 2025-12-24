@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// The main home screen view that serves as a container for all home screen components.
-/// Includes greeting header, emotions check-in section, and daily microlearning cards.
+/// Includes greeting header, emotions check-in section, daily microlearning cards, and quick access activities.
 struct HomeView: View {
     var body: some View {
         ScrollView {
@@ -14,6 +14,9 @@ struct HomeView: View {
                 
                 // Daily microlearning cards in horizontal scroll
                 DailyMicrolearningView()
+                
+                // Quick access cards with activities
+                QuickAccessView()
             }
             .padding(.top, 32)
             .padding(.bottom, 24)

@@ -35,7 +35,7 @@ struct QuickAccessView: View {
                     
                     // Second card with practice activity
                     VStack(spacing: 8) {
-                        QuickAccessCardView()
+                        QuickAccessCardView()       
                         
                         Text("Continue practice")
                             .font(.subheadline)
