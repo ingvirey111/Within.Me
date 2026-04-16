@@ -3,6 +3,9 @@ import SwiftUI
 /// A view that displays a horizontally scrollable row of quick access cards.
 /// Features a section title and multiple QuickAccessCardView components.
 struct QuickAccessView: View {
+    /// Quick-access entries to render as a horizontal row—each becomes one card plus title and action button.
+    let items: [QuickAccessItem]
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             // Section title
@@ -15,57 +18,22 @@ struct QuickAccessView: View {
             // Horizontally scrollable row of cards
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
-                    // First card with lesson activity
-                    VStack(spacing: 8) {
-                        QuickAccessCardView()
-                        
-                        Text("Continue lesson")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                        
-                        Button(action: {
-                            // TODO: Navigate to lesson or resume progress
-                        }) {
-                            Text("Resume")
+                    ForEach(items) { item in
+                        VStack(spacing: 8) {
+                            QuickAccessCardView(item: item)
+
+                            Text(item.title)
                                 .font(.subheadline)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.blue)
-                        }
-                    }
-                    
-                    // Second card with practice activity
-                    VStack(spacing: 8) {
-                        QuickAccessCardView()       
-                        
-                        Text("Continue practice")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                        
-                        Button(action: {
-                            // TODO: Navigate to practice or resume progress
-                        }) {
-                            Text("Resume")
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.blue)
-                        }
-                    }
-                    
-                    // Third card with exercise activity
-                    VStack(spacing: 8) {
-                        QuickAccessCardView()
-                        
-                        Text("Continue exercise")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                        
-                        Button(action: {
-                            // TODO: Navigate to exercise or resume progress
-                        }) {
-                            Text("Resume")
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(.secondary)
+
+                            Button(action: {
+                                // TODO: Navigate to lesson or resume progress
+                            }) {
+                                Text(item.actionText)
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.blue)
+                            }
                         }
                     }
                 }
@@ -76,8 +44,29 @@ struct QuickAccessView: View {
 }
 
 #Preview {
-    QuickAccessView()
-        .padding(.vertical)
-        .background(Color(.systemBackground))
+    QuickAccessView(
+        items: [
+            QuickAccessItem(
+                title: "Continue lesson",
+                description: "Practice mindfulness exercises to build emotional awareness.",
+                systemImageName: "figure.mind.and.body",
+                actionText: "Resume"
+            ),
+            QuickAccessItem(
+                title: "Continue practice",
+                description: "Build emotional awareness through guided reflection.",
+                systemImageName: "leaf.fill",
+                actionText: "Resume"
+            ),
+            QuickAccessItem(
+                title: "Continue exercise",
+                description: "Strengthen your emotional habits daily.",
+                systemImageName: "figure.walk",
+                actionText: "Resume"
+            )
+        ]
+    )
+    .padding(.vertical)
+    .background(Color(.systemBackground))
 }
 
