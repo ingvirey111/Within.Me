@@ -3,6 +3,9 @@ import SwiftUI
 /// A square card view for quick access to activities or exercises.
 /// Features an image and descriptive text.
 struct QuickAccessCardView: View {
+    /// The model supplying this card’s SF Symbol, body text, and related labels (title/action live in the parent row).
+    let item: QuickAccessItem
+
     var body: some View {
         let size = UIScreen.main.bounds.width * 0.75  // 75% of screen width
         
@@ -12,7 +15,7 @@ struct QuickAccessCardView: View {
             // Centered image and text group
             VStack(alignment: .leading, spacing: 12) {
                 // Image placeholder
-                Image(systemName: "figure.mind.and.body")
+                Image(systemName: item.systemImageName)
                     .font(.system(size: 50))
                     .foregroundStyle(
                         LinearGradient(
@@ -24,7 +27,7 @@ struct QuickAccessCardView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                 
                 // Descriptive text
-                Text("Practice mindfulness exercises to build emotional awareness.")
+                Text(item.description)
                     .font(.body)
                     .foregroundStyle(.primary)
                     .lineLimit(3)
@@ -43,8 +46,15 @@ struct QuickAccessCardView: View {
 }
 
 #Preview {
-    QuickAccessCardView()
-        .padding()
-        .background(Color(.systemBackground))
+    QuickAccessCardView(
+        item: QuickAccessItem(
+            title: "Continue lesson",
+            description: "Practice mindfulness exercises to build emotional awareness.",
+            systemImageName: "figure.mind.and.body",
+            actionText: "Resume"
+        )
+    )
+    .padding()
+    .background(Color(.systemBackground))
 }
 
