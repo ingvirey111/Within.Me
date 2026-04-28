@@ -24,6 +24,18 @@ struct HomeView: View {
         )
     ]
 
+    private let microlearningItems: [MicrolearningItem] = [
+        MicrolearningItem(
+            text: "Understanding your emotions is the first step to emotional intelligence."
+        ),
+        MicrolearningItem(
+            text: "Naming a feeling can make it easier to respond instead of react."
+        ),
+        MicrolearningItem(
+            text: "Small pauses between tasks help your nervous system reset."
+        )
+    ]
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
@@ -34,7 +46,7 @@ struct HomeView: View {
                 CheckInSectionView()
                 
                 // Daily microlearning cards in horizontal scroll
-                DailyMicrolearningView()
+                DailyMicrolearningView(items: microlearningItems)
                 
                 // Quick access cards with activities
                 QuickAccessView(items: quickAccessItems)

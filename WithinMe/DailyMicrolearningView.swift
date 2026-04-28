@@ -3,6 +3,9 @@ import SwiftUI
 /// A view that displays a horizontally scrollable row of microlearning cards.
 /// Features a section title and multiple MicrolearningCardView components.
 struct DailyMicrolearningView: View {
+    /// Microlearning snippets to show in the horizontal row—each becomes one `MicrolearningCardView`.
+    let items: [MicrolearningItem]
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             // Section title
@@ -15,10 +18,9 @@ struct DailyMicrolearningView: View {
             // Horizontally scrollable row of cards
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
-                    // Multiple microlearning cards
-                    MicrolearningCardView()
-                    MicrolearningCardView()
-                    MicrolearningCardView()
+                    ForEach(items) { item in
+                        MicrolearningCardView(item: item)
+                    }
                 }
                 .padding(.horizontal)
             }
@@ -27,8 +29,20 @@ struct DailyMicrolearningView: View {
 }
 
 #Preview {
-    DailyMicrolearningView()
-        .padding(.vertical)
-        .background(Color(.systemBackground))
+    DailyMicrolearningView(
+        items: [
+            MicrolearningItem(
+                text: "Understanding your emotions is the first step to emotional intelligence."
+            ),
+            MicrolearningItem(
+                text: "Naming a feeling can make it easier to respond instead of react."
+            ),
+            MicrolearningItem(
+                text: "Small pauses between tasks help your nervous system reset."
+            )
+        ]
+    )
+    .padding(.vertical)
+    .background(Color(.systemBackground))
 }
 
